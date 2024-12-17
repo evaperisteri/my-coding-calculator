@@ -13,6 +13,11 @@ public class Main {
     }
 
     public static int div(int a, int b)  {
-        return a/b;
+       try {
+           return a / b;
+       } catch (ArithmeticException e) {
+           System.err.println("error.denominator must not be zero");
+           throw e;
+       }
     }
 }
